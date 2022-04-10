@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.full-width-search_container {
+  background-color: red;
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.full-width-search_container .principal_container {
+  background-color: blue;
+  width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.full-width-search_container .principal_container .container_add {
+  width: 100%;
+}
+
+.full-width-search_container .principal_container .container_add #form-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #ingreso {
+  width: 45%;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: 1rem;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #ingreso::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #ingreso:-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #ingreso::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #ingreso::placeholder {
+  font-size: 1rem;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #btn_add {
+  width: 16.5%;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.full-width-search_container .principal_container .container_add #form-add #btn_add:hover {
+  font-weight: 600;
+}
+
+.full-width-list_search_container {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+}
+
+/* ========= VARIABLE GLOBALES ================ */
