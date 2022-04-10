@@ -21,6 +21,7 @@
 
             #form-add {
                 @include flex;
+
                 #ingreso {
                     width: 45%;
                     padding: 1rem 0 1rem 1rem;
@@ -57,7 +58,38 @@
 
 .full-width-list_search_container {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     @include flex;
     background-color: blue;
+
+    .listado_ingredientes {
+        width: 1140px;
+
+        #lista_ingredientes {
+            //padding: 1rem;
+            @include flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            position: relative;
+
+            li {
+                cursor: pointer;
+                padding: 1rem;
+                margin: .5rem;
+                background-color: green;
+                border-radius: 6px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: red;
+                }
+            }
+
+        }
+
+    }
 }

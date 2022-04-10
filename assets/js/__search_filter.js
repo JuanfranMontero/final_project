@@ -9,7 +9,7 @@
 		var tarea = tareaInput.value,
 			nuevaTarea = document.createElement("li"),
 			enlace = document.createElement("a"),
-			contenido = document.createTextNode('- ' + tarea);
+			contenido = document.createTextNode(tarea);
 
 		if (tarea != "") {
 			
