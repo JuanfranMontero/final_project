@@ -6,7 +6,7 @@ public record FoodTracker
     public string? Name { get; set; }
 }
 
-public class FoodTrackerDB
+public class FoodTrackerDB  
 {
     private static List<FoodTracker> _foodTrackers = new List<FoodTracker>()
    {
