@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\FoodTracker",
+    "\\MascotFoodAPI",
     "\\WebScraping_TiendaAnimal",
     "\\WebScraping_TiendaAnimal\\WebScraping_TiendaAnimal"
   ],
-  "SelectedNode": "\\FoodTracker\\Program.cs",
+  "SelectedNode": "\\MascotFoodAPI\\MascotFoodAPI.sln",
   "PreviewInSolutionExplorer": false
 }
