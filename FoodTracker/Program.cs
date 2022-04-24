@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 //using FoodTrack.DB;
 
 var builder = WebApplication.CreateBuilder(args);
-//var connectionString = builder.Configuration.GetConnectionString("FoodTracker")?? "Data Source= FoodTrack.DB";
+var connectionString = builder.Configuration.GetConnectionString("") ?? "Data Source=Pizzas.db";
 //builder.Services.AddEntityFrameworkMySql<FoodTrackerDB>(connectionString);
 
 builder.Services.AddEndpointsApiExplorer();
