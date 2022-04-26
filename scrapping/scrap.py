@@ -20,10 +20,11 @@ soup = BeautifulSoup(page.content, 'html.parser')
 dom = etree.HTML(str(soup))
 
 #Primera pagina
-enlaces = dom.xpath('//*[@id="iscroll"]/ul/li/div/div/div/a')
-imagenes = dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[1]/img/@src')
+enlaces = dom.xpath('//*[@id="iscroll"]/ul/li/div/div/div/a/@href')
+imagenes1 = dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[1]/img/@data-original')
+imagenes2 = dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[2]/img/@data-original')
 
-npaginas = 70 #Hay 70 paginas en mimascota.es
+npaginas = 66 #Hay 66 paginas en mimascota.es
 cont = 0
 
 #Bucle para que busque en todas las paginas
@@ -35,19 +36,22 @@ while True:
     soup = BeautifulSoup(page.content, 'html.parser')
     dom = etree.HTML(str(soup))
 
-    enlaces += dom.xpath('//*[@id="iscroll"]/ul/li/div/div/div/a')
-    imagenes += dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[1]/img/@src')
+    enlaces += dom.xpath('//*[@id="iscroll"]/ul/li/div/div/div/a/@href')
+    imagenes1 += dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[1]/img/@data-original')
+    imagenes2 += dom.xpath('//*[@id="iscroll"]/ul/li/div/div/figure/div[2]/img/@data-original')
+    
 
     if cont==npaginas:
         break
 
 #Saca por pantalla los href
-enlaces = [i.get('href') for i in enlaces]
 cont=0
-npiensos = 1383 #Hay 20 piensos por cada pagina
+npiensos = 1303 #Hay 20 piensos por cada pagina
 
 #Miro dentro de cada enlace y cojo lo que quiero
 ingredientes=list()
+caracteristicas_array=list()
+
 
 for enlace in enlaces:
     url=enlace
@@ -55,12 +59,23 @@ for enlace in enlaces:
     soup = BeautifulSoup(page.content, 'html.parser')
     dom = etree.HTML(str(soup))
 
-    ingredientes.append(dom.xpath('//*[@id="content-ingredients"]/div/div/p/text()')+dom.xpath('//*[@id="content-ingredients"]/div/div/text()'))
+    ingredientes.append(dom.xpath('//*[@id="content-ingredients"]/div/div//text()'))
+    caracteristicas_array.append(dom.xpath('//*[@id="content-mainInfo"]/div//text()'))
     
     cont+=1
     if cont==npiensos:
         break
 
+#Quitar los '\n'
+'''for caracteristica in caracteristicas_array:
+    for caract in caracteristica:
+        if caract=='\n':
+            caracteristica.remove(caract)
+
+for ingrediente in ingredientes:
+    for ingredient in ingrediente:
+        if ingredient =='\n':
+            ingrediente.remove(ingredient)   '''        
 
 cursor = connection.cursor()
 
@@ -69,6 +84,9 @@ juntito=''
 for ingrediente in ingredientes:
     for ingredient in ingrediente:
         juntito+=ingredient+' '
+
+    if juntito == '':
+        juntito='---'
 
     sql="INSERT INTO descripcion_nutricional (ingredientes) VALUES (%s)"
     value=juntito
@@ -81,7 +99,31 @@ for ingrediente in ingredientes:
     juntito=''
 
 
+juntito=''
+for caracteristica in caracteristicas_array:
+    for caracter in caracteristica:
+        juntito+=caracter+' '
 
+    sql="INSERT INTO caracteristicas (caracteristicas) VALUES (%s)"
+    value=juntito
+    cursor.execute(sql,value)  
+
+    juntito='' 
+
+cont=0
+cont2=0
+while True:
+    sql="INSERT INTO alimentos (enlace, enlace_imagen, enlace_imagen_2) VALUES (%s, %s, %s)"
+    value=enlaces[cont],imagenes1[cont],imagenes2[cont2]
+    cursor.execute(sql,value)
+
+    cont+=1
+    cont2+=1
+    if cont2 == len(imagenes2):
+        imagenes2[cont2-1]=''
+        cont2-=1
+    if cont == len(enlaces):
+        break
 
 connection.commit()
 
