@@ -1,8 +1,9 @@
-@import "__default_mixing";
+@import "__default_styles";
+
+@import "__search_filter";
+
+@import "__index";
+
+@import "__login";
 
 *{@include resetStyle;}
-
-@import "__search_filter"
-
-
-/* ========= VARIABLE GLOBALES ================ */
