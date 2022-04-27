@@ -1,0 +1,24 @@
+
+/*===== COLORS =======*/
+$green: #606C38;
+$darkGreen: #283618;
+$beige: #FEFAE0;
+$lightOrange: #DDA15E;
+$orange: #BC6C25;
+$black: #333;
+
+/*===== FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/*====== MIXINGS ========*/
+@mixin resetStyle {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
