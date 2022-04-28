@@ -23,24 +23,30 @@ namespace MascotFoodAPI.Controllers
 
         // GET: api/DescripcionNutricionals
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DescripcionNutricional>>> GetDescripcionNutricionals()
+        public IQueryable<DescripcionNutricional> GetDescripcionNutricionals(string ingredientInclude, string serchString)
         {
-            return await _context.DescripcionNutricionals.ToListAsync();
+            var result1 = from Version in _context.DescripcionNutricionals
+                          where Version.Ingredientes.Contains(serchString)
+                          select Version.IdDescripcion;
+
+            var result = _context.DescripcionNutricionals.Where(x => x.Ingredientes.Contains(serchString));
+
+            return result;
         }
 
         // GET: api/DescripcionNutricionals/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<DescripcionNutricional>> GetDescripcionNutricional(int id)
-        {
-            var descripcionNutricional = await _context.DescripcionNutricionals.FindAsync(id);
+        // [HttpGet("{}")]
+        // public async Task<ActionResult<DescripcionNutricional>> GetDescripcionNutricional(int id)
+        // {
+        //     var descripcionNutricional = await _context.DescripcionNutricionals.FindAsync(id);
 
-            if (descripcionNutricional == null)
-            {
-                return NotFound();
-            }
+        //     if (descripcionNutricional == null)
+        //     {
+        //         return NotFound();
+        //     }
 
-            return descripcionNutricional;
-        }
+        //     return descripcionNutricional;
+        // }
 
         // PUT: api/DescripcionNutricionals/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
