@@ -308,8 +308,6 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .popup-product .info-product #content .content-product {
@@ -665,8 +663,6 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .popup-product .info-product #content .content-product {
@@ -915,8 +911,16 @@ body {
   font-weight: 600;
 }
 
-.main-container .container-cards {
-  width: 65%;
+.main-container .table_products {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.5);
+          box-shadow: 0 0 10px rgba(51, 51, 51, 0.5);
+  padding: 2rem;
+}
+
+.main-container .table_products .product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -926,61 +930,36 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 3rem 0;
-}
-
-.main-container .container-cards .card {
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
-  margin: 1rem;
-  padding-bottom: .5rem;
-  text-align: center;
-  border-radius: 10px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   cursor: pointer;
-  border: 1px solid rgba(51, 51, 51, 0.5);
-}
-
-.main-container .container-cards .card .picture {
   width: 100%;
-  height: 160px;
-  border-bottom: 1px solid #283618;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100px;
+  margin: 1rem;
+  padding: .5rem;
+  border-radius: 8px;
 }
 
-.main-container .container-cards .card .picture img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.main-container .table_products .product .picture_product {
+  width: 150px;
+  height: 100px;
+}
+
+.main-container .table_products .product .picture_product img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 99%;
 }
 
-.main-container .container-cards .card .marca {
-  width: 100%;
-  font-size: 1rem;
-  color: #333;
-  padding: .5rem .2rem;
-}
-
-.main-container .container-cards .card .description {
+.main-container .table_products .product .info_product .description {
   display: none;
 }
 
-.main-container .container-cards .card .icon-plus i {
-  font-weight: 600;
-  font-size: 30px;
+.main-container .table_products .product:hover {
+  background-color: #606C38;
 }
 
-.main-container .container-cards .card:hover {
-  -webkit-box-shadow: 0 0 25px rgba(51, 51, 51, 0.8);
-          box-shadow: 0 0 25px rgba(51, 51, 51, 0.8);
+.main-container .table_products .product:hover .info_product .title {
+  color: #FEFAE0;
 }
 
 /*============ FINAL CONTENEDOR INGREDIENTES =============*/
@@ -1291,8 +1270,6 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .popup-product .info-product #content .content-product {
@@ -1757,8 +1734,6 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .popup-product .info-product #content .content-product {
@@ -1872,8 +1847,6 @@ body {
   border-top-right-radius: 10px;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #main-container .container-cards .card .marca {
@@ -2205,8 +2178,6 @@ body {
   border-radius: 10px;
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .popup-product .info-product #content .content-product {
