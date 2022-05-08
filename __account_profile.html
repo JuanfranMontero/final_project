@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!--LINK ICON FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/__account_profile.js"></script>
+    <title>Perfil | BellyPlus</title>
+</head>
+
+<body>
+
+    <div id="sidemenu" class="menu-collapsed">
+
+        <!-- HEADER -->
+        <div id="header">
+            <div id="title"><span>BellyPlus</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger top"></div>
+                <div class="btn-hamburger middle"></div>
+                <div class="btn-hamburger bottom"></div>
+            </div>
+
+        </div>
+        <!-- PERFIL -->
+        <a href="__account_profile.html">
+            <div id="profile">
+                <div id="photo">
+                    <img src="assets/img/logo-clinica.jpg" alt="Foto perfil">
+                </div>
+                <div id="name">
+                    <span>Juanfran Montero</span>
+                </div>
+            </div>
+        </a>
+        <!-- ITEMS -->
+        <div id="menu-items">
+
+            <div class="item">
+                <a href="__dashboard.html">
+                    <div class="icon"><i class="fa-light fa-house"></i></div>
+                    <div class="title"><span>Home</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="__search_filter.html">
+                    <div class="icon"><i class="fa-light fa-magnifying-glass"></i></div>
+                    <div class="title"><span>Consultas</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="__account_profile.html">
+                    <div class="icon"><i class="fa-light fa-user"></i></div>
+                    <div class="title"><span>Configuración</span></div>
+                </a>
+            </div>
+
+            <div class="item separator"></div>
+
+            <div class="item">
+                <a href="index.html">
+                    <div class="icon logout"><i class="fa-light fa-arrow-right-from-bracket"></i></div>
+                    <div class="title"><span>Log Out</span></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+    <div id="main-container">
+    
+        <div class="wrapper_account_profile">
+            <div class="picture_profile">
+                <img src="assets/img/logo-clinica.jpg" alt="Imagen perfil">
+            </div>
+
+            <div class="info_profile">
+                <div id="nombre">
+                    <h3>Nombre</h3>
+                    <p>Clinica Veterinaria Andalucia</p>
+                </div>
+                <div id="telefono">
+                    <h3>Telefono</h3>
+                    <p>643 54 26 34</p>
+                </div>
+                <div id="correo">
+                    <h3>Correo Electronico</h3>
+                    <p>contacto@clinicavetandalucia.com</p>
+                </div>
+            </div>
+            <div class="btn_profile">
+                <button id="modify">Modificar</button>
+                <button id="save">Guardar</button>
+                <button id="delete">Eliminar perfil</button>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+        <footer class="footer">&copy; Todos los derechos reservados | 2022</footer>
+</body>
+
+</html>

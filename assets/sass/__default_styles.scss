@@ -1,4 +1,3 @@
-
 /*===== COLORS =======*/
 $green: #606C38;
 $darkGreen: #283618;
@@ -8,7 +7,7 @@ $orange: #BC6C25;
 $black: #333;
 
 /*===== FONTS ======*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap');
 
 /*====== MIXINGS ========*/
 @mixin resetStyle {
@@ -17,8 +16,354 @@ $black: #333;
     box-sizing: border-box;
 }
 
-@mixin flex(){
+@mixin flex() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*====HEADER====*/
+$width: 300px;
+$padding: 10px;
+$bgcolor: $green;
+$hovercolor: $darkGreen;
+$width-collapsed: 50px;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    //font-family: 'Nunito', sans-serif;
+}
+
+body { 
+    background-color: $beige;
+    font-size: 1.2rem;
+}
+
+
+#sidemenu {
+    background-color: $bgcolor;
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /*====HEADER====*/
+    #header {
+        background-color: $darkGreen;
+
+        #title,
+        #menu-btn {
+            vertical-align: middle;
+        }
+
+        #title {
+            overflow: hidden;
+        }
+
+        #menu-btn {
+            display: inline-block;
+            cursor: pointer;
+            padding: $padding;
+            width: 45px;
+            transition: all 3s;
+
+            .btn-hamburger {
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                margin: 5px 0;
+            }
+
+            &:hover {
+                background-color: $hovercolor;
+            }
+        }
+    }
+
+    /*====FINAL HEADER====*/
+
+    /*====PERFIL====*/
+    #profile {
+        border-bottom: 1px solid $hovercolor;
+        cursor: pointer;
+        text-align: center;
+
+        #photo {
+            margin: 0 auto;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        #photo,
+        #name {
+            font-size: 1.5rem;
+            overflow: hidden;
+        }
+    }
+
+    /*====FINAL PERFIL====*/
+
+    /*====ITEMS====*/
+    #menu-items {
+        overflow: hidden;
+
+        .item {
+            width: $width;
+
+            a {
+                display: block;
+                padding-left: .3rem;
+                margin: 1rem 0;
+
+                &:hover {
+                    background-color: $hovercolor;
+                }
+            }
+
+            .icon {
+                display: inline-block;
+                padding: $padding;
+                width: $width-collapsed;
+
+                i {
+                    font-family: "FontAwesome" !important;
+                    width: 100%;
+                    font-size: 1.3rem;
+                }
+
+                &.logout {
+                    i {
+                        color: $orange;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .title {
+                padding: $padding 0;
+            }
+
+            .icon,
+            .title {
+                font-size: 1rem;
+                vertical-align: middle;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            &.separator {
+                height: 1px;
+                border-bottom: 1px solid $hovercolor;
+            }
+        }
+
+
+    }
+
+    /*====FINAL ITEMS====*/
+}
+
+.menu-expanded {
+    width: $width;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+    #header {
+
+        #title {
+            display: inline-block;
+            width: calc(100% - 50px);
+            margin-right: -5px;
+            padding: $padding;
+
+            span {
+                width: calc($width - $width-collapsed - 5px);
+                overflow: hidden;
+            }
+        }
+
+        #menu-btn {
+
+            .top {
+                transform: rotate(45deg) translate(5px, 2px);
+            }
+
+            .middle {
+                display: none;
+            }
+
+            .bottom {
+                transform: rotate(-45deg) translate(2px, 0);
+            }
+        }
+    }
+
+    #profile {
+        padding: $padding;
+
+        #photo {
+            img {
+                width: 85px;
+                height: 85px;
+            }
+        }
+
+        #name {
+            width: 100%;
+        }
+    }
+}
+
+.menu-collapsed {
+    width: $width-collapsed;
+
+    #header {
+        #title {
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    #profile {
+        #photo {
+            padding: $padding 0;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        #name {
+            display: none;
+        }
+    }
+
+    .item {
+        width: 100px;
+    }
+}
+
+/*====FINAL HEADER====*/
+
+/*====POP UP====*/
+
+.popup-product {
+    @include flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+
+    .info-product {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 55%;
+        border-radius: 10px;
+        display: flex;
+        padding: 1.2rem;
+
+        #menu-btn-popup {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            padding: $padding;
+            width: $width-collapsed;
+            transition: all 3s;
+
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+
+
+            .btn-hamburger-popup {
+                background-color: $black;
+                width: 100%;
+                height: 2px;
+                margin: 5px 0;
+
+                &.top{
+                    transform: rotate(45deg) translate(5px, 2px);
+                }
+                &.bottom{
+                    transform: rotate(-45deg) translate(2px, 0);
+                }
+
+            }
+
+        }
+
+        #content{
+            @include flex;
+
+            .picture{
+                width: 40%;
+                height: auto;
+                img{
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+            .content-product{
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                text-align: justify;
+
+                .title{
+                    font-size: 1.2rem;
+                    padding: .8rem 0;
+                }
+                .descripcion{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+      
+}
+
+/*====FINAL POP UP====*/
+
+
+
+/*======= FOOTER ========*/
+
+.footer {
+    background-color: $darkGreen;
+    border-top: 1px solid $darkGreen;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    @include flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: $beige;
+    font-weight: 300;
+    z-index: 2;
+}
+
+/*======= FINAL FOOTER ========*/
