@@ -8,9 +8,11 @@
 
 
 /*====FINAL MAIN CONTAINER====*/
-#main-container{
-    @include flex;
-    width: 100%;
+#main-container-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1140px;
     height: 100vh;
 
     .wrapper_account_profile{
@@ -19,7 +21,7 @@
         box-shadow: 0 0 20px rgba(#333, .5);
         border-radius: 10px;
         background-color: #fff;
-        width: 60%;
+        width: 80%;
     
 
         .picture_profile{
