@@ -6,73 +6,179 @@
 
 /*====MAIN CONTENT====*/
 #main-container {
-    @include flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
+    width: 1140px;
     height: 100vh;
+    padding-left: 50px;
 
-    #mas_buscado{
-        font-size: 2rem;
+    .mas-buscados, .mas-cambiados, .mas-vendidos {
+
+
+        .top-info-dashboard {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 3rem;
+
+            #mas_buscado {
+                font-size: 1.5rem;
+                padding-left: 1rem;
+            }
+
+            #more-results {
+                text-decoration: none;
+                padding: 1rem 1.2rem;
+                border-radius: 16px;
+                font-size: 1rem;
+                background-color: transparent;
+                color: $green;
+                border: 1.5px solid $darkGreen;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $darkGreen;
+                }
+            }
+
+        }
+
+
+        .container-cards {
+            width: 100%;
+            @include flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 1.5rem 0;
+
+            .card {
+                position: relative;
+                margin: .78rem;
+                width: 247px;
+                height: 325px;
+                transition: all .5s;
+                cursor: pointer;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0 0 16px rgba($black, .3);
+                border-radius: 16px;
+
+                .picture {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+
+                    img {
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        width: 170px;
+                        height: 170px;
+                    }
+
+                }
+
+                .marca {
+                    width: 100%;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $black;
+                    padding: .6rem;
+                    overflow: hidden;
+                }
+
+                .read_more {
+                    font-size: .8rem;
+                    font-weight: 400;
+                    position: absolute;
+                    color: $black;
+                    bottom: 14px;
+                    left: 12px;
+
+                    i {
+                        font-size: 16px;
+                        position: absolute;
+                        margin-left: .5rem;
+
+                        &::before {
+                            font-family: "FontAwesome";
+                        }
+                    }
+                }
+
+                .description {
+                    display: none;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 25px rgba($black, .6);
+                }
+
+            }
+        }
     }
 
-    .container-cards {
-        width: 65%;
-        @include flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 3rem 0;
+    @media (max-width: 1140px) {
+        .container-cards {
+            justify-content: center !important;
+        }
+    }
 
-        .card {
-            flex-basis: 200px;
-            margin: 1rem;
-            padding-bottom: .5rem;
-            text-align: center;;
-            border-radius: 10px;
-            transition: all .5s;
-            cursor: pointer;
-            border: 1px solid rgba($black, .5);
+    @media (max-width: 770px) {
 
-            .picture {
-                width: 100%;
-                height: 160px;
-                border-bottom: 1px solid $darkGreen;
-                object-fit: cover;
+        .top-info-dashboard {
+            justify-content: space-evenly !important;
 
-
-                img {
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                    width: 100%;
-                    height: 100%;
-                }
-
+            #mas_buscado {
+                font-size: 1.2rem !important;
             }
 
-            .marca {
-                width: 100%;
-                font-size: 1rem;
-                color: $black;
-                padding: .5rem .2rem;
+            #more-results {
+                padding: .5rem 1rem !important;
+                font-size: .8rem !important;
+                border-radius: 8px !important;
+            }
+        }
+
+        .container-cards {
+            justify-content: center !important;
+
+            .card {
+                width: 232px !important;
+            }
+        }
+    }
+
+    @media (min-width: 375px) and (max-width: 500px) {
+
+        #main-container {
+            padding-left: 50px !important;
+        }
+
+        .top-info-dashboard {
+            flex-direction: column;
+            align-items: center !important;
+
+            #mas_buscado {
+                font-size: 1rem !important;
+                padding-left: 0 !important;
+                padding-bottom: .5rem !important;
             }
 
-            .description {
-                display: none;
+            #more-results {
+                padding: .5rem 1rem !important;
+                font-size: .8rem !important;
+                border-radius: 8px !important;
             }
+        }
 
-            .icon-plus {
-                i {
-                    font-weight: 600;
-                    font-size: 30px;
-                }
+        .container-cards {
+            justify-content: center !important;
+
+            .card {
+                width: 232px !important;
             }
-
-
-
-            &:hover {
-                box-shadow: 0 0 25px rgba($black, .8);
-            }
-
         }
     }
 

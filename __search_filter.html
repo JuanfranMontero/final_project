@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <script src="assets/js/__search_filter.js"></script>
-    <title>Consultas | NombreEmpresa</title>
+    <title>Consultas | BellyPlus</title>
 </head>
 
 <body>
@@ -83,18 +84,20 @@
                 <div class="container_add">
                     <form action="#" id="form-add">
                         <input type="text" id="ingreso" placeholder="Ingrese un ingrediente...">
-                        <button id="btn_repeat">Repetir busqueda</button>
+                        <button id="btn_repeat">Limpiar</button>
                         <button id="btn_add">Añadir</button>
                     </form>
                 </div>
             </div>
         </div>
+        <!--
         <div class="full-width-list_search_container" id='container-view'>
             <div class="listado_ingredientes">
                 <ul id="lista_ingredientes">
                 </ul>
             </div>
         </div>
+        -->
 
         <div class="popup-product">
             <div class="info-product">
@@ -118,98 +121,133 @@
             </div>
         </div>
 
+        <div class="top-info">
+            <h5>Mostrar resultados para: <span></span></h5>
+            <h6><span></span> resultados encontrados</h6>
+        </div>
         <div class="table_products">
 
-            <div class="product">
-
-                <div class="picture_product">
-                    <img src="assets/img/pienso1.jpg" alt="Iamgen pienso">
+            <!-- <div class="product">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/26640-princi.jpg" alt="Imagen pienso" class="picture-product">
                 </div>
-                <div class="info_product">
-                    <h3 class="title">Pienso Criadores para perros adultos Cordero y arroz</h3>
-                    <p class="description">
-                        Descripción nutricional:
-
-                    Composición: Cordero deshidratado (26%), arroz (26%), grasa de pollo, concentrado de proteínas
-                    vegetales, manzana deshidratada, harina de arroz, pescado deshidratado LT, fibras vegetales,
-                    levadura deshidratada, proteína hidrolizada de pollo, aceite de salmón (fuente de DHA)(0.6%), aceite
-                    de linaza (0.3%), extracto de Yuca (0.04%), extracto de romero (0.02%) (gran poder conservante),
-                    aceite vegetal rico en tocoferoles (gran poder antioxidante), cloruro potásico, cloruro de sodio.
-                    Componentes analíticos: Proteína bruta: 23,6%, grasa bruta: 15,5%, fibra bruta: 4,3%, ceniza bruta:
-                    8%, humedad: 8%, calcio: 1,8%, fósforo: 1%, glucosamina: 600 mg/kg, Energía metabolizable: 3430
-                    kcal/kg
-                    Aditivos. Aditivos nutricionales: (3a672a) Vitamina A: 16000 UI/kg, (3a671) Vitamina D3: 1600 UI/kg,
-                    (3a700) Vitamina E: 200 mg/kg,(3b101) Hierro (Carbonato de hierro (II)): 200 mg/kg, (3b203) Yodo
-                    (Yodato de calcio anhidro granulado recubierto): 1.5 mg/kg, (3b405) Cobre (Sulfato cúprico,
-                    penta-hidratado): 23 mg/kg, (3b502) Manganeso (Óxido de manganeso (II)): 70 mg/kg, (3b603) Zinc
-                    (óxido de Zinc): 100 mg/kg, (3b801) Selenio (Selenito de sodio): 0.4 mg/kg. Aditivos tecnológicos:
-                    Extractos de tocoferoles de aceites vegetales.
-                    </p>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso Nath Adult Medium Pollo para perros</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
                 </div>
-
-
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
             </div>
 
             <div class="product">
-                <div class="picture_product">
-                    <img src="assets/img/pienso2.jpg" alt="Iamgen pienso">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/pienso-true-origins-wild-country-water-adult-mta-31451.jpg" alt="Imagen pienso" class="picture-product">
                 </div>
-                <div class="info_product">
-                    <h3 class="title">Pienso Criadores para perros adultos Cordero y arroz</h3>
-                    <p class="description">
-                        Descripción nutricional:
-
-                    Composición: Cordero deshidratado (26%), arroz (26%), grasa de pollo, concentrado de proteínas
-                    vegetales, manzana deshidratada, harina de arroz, pescado deshidratado LT, fibras vegetales,
-                    levadura deshidratada, proteína hidrolizada de pollo, aceite de salmón (fuente de DHA)(0.6%), aceite
-                    de linaza (0.3%), extracto de Yuca (0.04%), extracto de romero (0.02%) (gran poder conservante),
-                    aceite vegetal rico en tocoferoles (gran poder antioxidante), cloruro potásico, cloruro de sodio.
-                    Componentes analíticos: Proteína bruta: 23,6%, grasa bruta: 15,5%, fibra bruta: 4,3%, ceniza bruta:
-                    8%, humedad: 8%, calcio: 1,8%, fósforo: 1%, glucosamina: 600 mg/kg, Energía metabolizable: 3430
-                    kcal/kg
-                    Aditivos. Aditivos nutricionales: (3a672a) Vitamina A: 16000 UI/kg, (3a671) Vitamina D3: 1600 UI/kg,
-                    (3a700) Vitamina E: 200 mg/kg,(3b101) Hierro (Carbonato de hierro (II)): 200 mg/kg, (3b203) Yodo
-                    (Yodato de calcio anhidro granulado recubierto): 1.5 mg/kg, (3b405) Cobre (Sulfato cúprico,
-                    penta-hidratado): 23 mg/kg, (3b502) Manganeso (Óxido de manganeso (II)): 70 mg/kg, (3b603) Zinc
-                    (óxido de Zinc): 100 mg/kg, (3b801) Selenio (Selenito de sodio): 0.4 mg/kg. Aditivos tecnológicos:
-                    Extractos de tocoferoles de aceites vegetales.
-                    </p>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso True Origins Wild Dog Country Water Adult</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
                 </div>
-
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
             </div>
 
             <div class="product">
-                <div class="picture_product">
-                    <img src="assets/img/pienso3.jpg" alt="Iamgen pienso">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/pienso-natural-greatness-light-para-perros-mta-14744.jpg" alt="Imagen pienso" class="picture-product">
                 </div>
-                <div class="info_product">
-                    <h3 class="title">Pienso Criadores para perros adultos Cordero y arroz</h3>
-                    <p class="description">
-                        Descripción nutricional:
-
-                    Composición: Cordero deshidratado (26%), arroz (26%), grasa de pollo, concentrado de proteínas
-                    vegetales, manzana deshidratada, harina de arroz, pescado deshidratado LT, fibras vegetales,
-                    levadura deshidratada, proteína hidrolizada de pollo, aceite de salmón (fuente de DHA)(0.6%), aceite
-                    de linaza (0.3%), extracto de Yuca (0.04%), extracto de romero (0.02%) (gran poder conservante),
-                    aceite vegetal rico en tocoferoles (gran poder antioxidante), cloruro potásico, cloruro de sodio.
-                    Componentes analíticos: Proteína bruta: 23,6%, grasa bruta: 15,5%, fibra bruta: 4,3%, ceniza bruta:
-                    8%, humedad: 8%, calcio: 1,8%, fósforo: 1%, glucosamina: 600 mg/kg, Energía metabolizable: 3430
-                    kcal/kg
-                    Aditivos. Aditivos nutricionales: (3a672a) Vitamina A: 16000 UI/kg, (3a671) Vitamina D3: 1600 UI/kg,
-                    (3a700) Vitamina E: 200 mg/kg,(3b101) Hierro (Carbonato de hierro (II)): 200 mg/kg, (3b203) Yodo
-                    (Yodato de calcio anhidro granulado recubierto): 1.5 mg/kg, (3b405) Cobre (Sulfato cúprico,
-                    penta-hidratado): 23 mg/kg, (3b502) Manganeso (Óxido de manganeso (II)): 70 mg/kg, (3b603) Zinc
-                    (óxido de Zinc): 100 mg/kg, (3b801) Selenio (Selenito de sodio): 0.4 mg/kg. Aditivos tecnológicos:
-                    Extractos de tocoferoles de aceites vegetales.
-                    </p>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso Natural Greatness Light & Fit para perros</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
                 </div>
-
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
             </div>
-           
+
+            <div class="product">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/pienso-para-perros-acana-adult-light-mta-4372.jpg" alt="Imagen pienso" class="picture-product">
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso para perros Acana Adult Light & Fit</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
+                </div>
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/2364-2364-1.jpg" alt="Imagen pienso" class="picture-product">
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h5>Royal Canin Maxi Adult</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
+                </div>
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/pienso-criadores-dietetic-hipoalerg-nico-para-perr-mta-17206.jpg" alt="Imagen pienso" class="picture-product">
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso Criadores Dietetic Hipoalergénico para perros</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
+                </div>
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="picture">
+                    <img src="https://images1.tiendanimal.es/g/26636-princi.jpg" alt="Imagen pienso" class="picture-product">
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h5>Pienso Nath Puppy Medium/Maxi Pollo para cachorros</h5>
+                    </div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
+                    </div>
+                </div>
+                <div class="read">
+                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
+                </div>
+            </div> -->
 
         </div>
-    
-        <footer class="footer">&copy; Todos los derechos reservados | 2022</footer>
+    </div>
 
 </body>
 

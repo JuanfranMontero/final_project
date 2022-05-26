@@ -9,6 +9,7 @@ window.onload = () => {
         menu.classList.toggle("menu-expanded")
         menu.classList.toggle("menu-collapsed")
     });
+
     /*====FINAL HEADER====*/
 
     /*====POP UP====*/
@@ -17,7 +18,7 @@ window.onload = () => {
     })
 
     /*====MAIN CONTAINER====*/
-    let products = document.querySelectorAll("#main-container > .container-cards .card")
+    let products = document.querySelectorAll(".container-cards .card")
 
 
     products.forEach(product_element => {
