@@ -4,7 +4,9 @@
     @include resetStyle;
 }
 
-body{margin-left: 0}
+body {
+    margin-left: 0
+}
 
 /*============ HEADER ===============*/
 //ESTILOS EN "__default_styles"
@@ -53,7 +55,8 @@ body{margin-left: 0}
                         }
                     }
 
-                    #btn_add, #btn_repeat {
+                    #btn_add,
+                    #btn_repeat {
                         width: 100px;
                         padding: 1rem 1rem;
                         border-radius: 5px;
@@ -70,18 +73,22 @@ body{margin-left: 0}
                             font-weight: 600;
                         }
                     }
-                    #btn_add{
+
+                    #btn_add {
                         background-color: $darkGreen;
                         color: #fff;
-                        &:hover{
+
+                        &:hover {
                             box-shadow: 0 0 2px 2px rgba($green, .6);
                         }
                     }
-                    #btn_repeat{
+
+                    #btn_repeat {
                         background-color: transparent;
                         color: $darkGreen;
                         border: 1px solid $darkGreen;
-                        &:hover{
+
+                        &:hover {
                             box-shadow: 0 0 2px 2px rgba($green, .6);
                         }
                     }
@@ -132,13 +139,13 @@ body{margin-left: 0}
         }
     }
 
-    .top-info{
+    .top-info {
         display: flex;
         justify-content: space-between;
         width: 100%;
 
-        h5{
-            span{
+        h5 {
+            span {
                 cursor: pointer;
                 color: rgba($black, .6);
                 font-weight: 400;
@@ -146,19 +153,20 @@ body{margin-left: 0}
             }
         }
 
-        h6{
+        h6 {
             color: $darkGreen;
             font-weight: 400
         }
     }
-    .table_products{
+
+    .table_products {
         @include flex;
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 100%;
         padding: 2rem 0;
-    
-        .product{
+
+        .product {
             position: relative;
             margin: .78rem;
             width: 260px;
@@ -166,10 +174,10 @@ body{margin-left: 0}
             transition: all .5s;
             cursor: pointer;
             background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0  0 16px rgba($black, .3);
+            box-shadow: 0 0 16px rgba($black, .3);
             border-radius: 16px;
 
-            .picture{
+            .picture {
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
@@ -177,7 +185,8 @@ body{margin-left: 0}
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
-                .picture-product{
+
+                .picture-product {
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                     width: 170px;
@@ -185,7 +194,7 @@ body{margin-left: 0}
                 }
             }
 
-            .content{
+            .content {
                 .title {
                     width: 100%;
                     font-size: 1.2rem;
@@ -194,11 +203,13 @@ body{margin-left: 0}
                     padding: .6rem;
                     overflow: hidden;
                 }
-                .description{
+
+                .description {
                     display: none;
                 }
             }
-            .read{
+
+            .read {
                 font-size: .8rem;
                 font-weight: 400;
                 position: absolute;
@@ -206,12 +217,12 @@ body{margin-left: 0}
                 bottom: 14px;
                 left: 12px;
 
-                i{
+                i {
                     font-size: 16px;
                     position: absolute;
                     margin-left: .5rem;
 
-                    &::before{
+                    &::before {
                         font-family: "FontAwesome";
                     }
                 }
@@ -225,3 +236,78 @@ body{margin-left: 0}
 /*============ FOOTER ===============*/
 //ESTILOS EN "__default_styles"
 /*============ FINAL FOOTER ===============*/
+
+
+@media all and (max-width: 1300px) {
+
+    .main-container{
+        .full-width-search_container{
+            .principal_container{
+                .container_add{
+                    #form-add{
+                        flex-direction: column !important;
+
+                        #ingreso{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                } 
+            } 
+        } 
+
+        .top-info{
+            justify-content: space-around;
+        }
+
+        .table_products{
+            width: 90%;
+            justify-content: center;
+            margin-left: 50px;
+        }
+    } 
+
+}
+
+@media all and (max-width: 620px){
+  
+    .main-container{
+        .top-info{
+            flex-direction: column;
+            h5, h6{
+                width: 70%;
+                margin: 0 auto;
+                padding-bottom: .5rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 365px) and (max-width: 450px){
+    .main-container{
+        .full-width-search_container{
+            .principal_container{
+                .container_add{
+                    #form-add{
+                       margin-left: 50px;
+
+                       .btn-form{
+                           #btn_add, #btn_repeat{
+                              padding: .5rem .8rem !important; 
+                           }
+                       }
+                    }
+                } 
+            } 
+        } 
+
+        .top-info{
+            h5{
+                font-size: .9rem;
+            }
+            h6{
+                font-size: .75rem;
+            }
+        }
+
+    }
+}

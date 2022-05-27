@@ -15,8 +15,8 @@ window.onload = () => {
 
 	/*====BUSCADOR Y LISTADO====*/
 
-	let btnAdd = document.querySelector(".full-width-search_container .principal_container .container_add #form-add #btn_add")
-	let btnReset = document.querySelector(".full-width-search_container .principal_container .container_add #btn_repeat")
+	let btnAdd = document.querySelector(".full-width-search_container .principal_container .container_add #form-add .btn-form #btn_add")
+	let btnReset = document.querySelector(".full-width-search_container .principal_container .container_add .btn-form #btn_repeat")
 
 	btnAdd.addEventListener("click", agregarIngrediente());
 
@@ -24,9 +24,6 @@ window.onload = () => {
 	textbox.addEventListener("keypress", event => {
 		if (event.key === "Enter") {
 			agregarIngrediente()
-			/*let ingrediente = document.querySelector("#container_add #form-add #ingreso").textContent
-			document.querySelector("#container_add #form-add #ingreso").textContent = ""
-			buscar_piensos(ingrediente)*/
 		}
 	});
 
@@ -89,7 +86,7 @@ function showAllProducts(){
 					let div_product = document.createElement('div')
 					div_product.classList.add("product")
 					for (let element in elements) {
-						console.log(element);
+						console.log(`${element}: ${elements[element]}`);
 						if (element == "imagen") {
 							let picture_product = document.createElement('div')
 							picture_product.classList.add("picture")
@@ -113,8 +110,9 @@ function showAllProducts(){
 							
 						}
 					}
-					table_products.appendChild(div_product)
+					console.log(contador);
 					contador++
+					table_products.appendChild(div_product)
 					
 				}
 				productosTotales(contador)
@@ -153,7 +151,6 @@ function buscar_piensos(ingrediente) {
 					let div_product = document.createElement('div')
 					div_product.classList.add("product")
 					for (let element in elements) {
-						console.log(element);
 						if (element == "imagen") {
 							let picture_product = document.createElement('div')
 							picture_product.classList.add("picture")
@@ -192,12 +189,10 @@ function buscar_piensos(ingrediente) {
 	
 	
 	
-	
 	/*====CONTABILIZAR PRODUCTOS====*/
 	function productosTotales(total){
 		let numProductos = document.querySelector(".top-info h6 span")
-		numProductos.textContent = ""
-		numProductos.textContent = total
+		numProductos.innerHTML = total
 	}
 
 

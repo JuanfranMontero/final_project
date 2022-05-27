@@ -326,7 +326,7 @@ body {
 
         #content {
             @include flex;
-            padding: 2rem;
+            padding: 1rem;
 
             .picture {
                 width: 30%;
@@ -396,3 +396,36 @@ body {
 }
 
 /*======= FINAL FOOTER ========*/
+
+
+@media all and (max-width: 950px){
+
+    .popup-product{
+        .info-product{
+            top: 50%;
+            left: 55%;
+            #content{
+                flex-direction: column;
+
+                .picture{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    
+                    img{
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                .content-product{
+                    width: 100%;
+
+                    .descripcion{
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+    }
+}

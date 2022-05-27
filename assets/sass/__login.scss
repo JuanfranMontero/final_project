@@ -1,18 +1,18 @@
 @import "__default_styles";
 
 body {
-    background: $beige;
     height: 100vh;
     @include flex;
 
     .wrapper {
-        width: 350px;
+        width: 50%;
         padding: 2rem 0 1rem 0;
         margin: 50px auto;
         background: #fff;
         border-radius: 10px;
         text-align: center;
-        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(#333, .55);
+        box-shadow: 0 0 25px 5px rgba($beige, 0.5);
 
         h1 {
             font-size: 2rem;
@@ -24,6 +24,8 @@ body {
         }
 
         form {
+            margin: 0 auto;
+            width: 50%;
             input {
                 width: 85%;
                 outline: none;
@@ -53,7 +55,7 @@ body {
             border-radius: 5px;
             outline: none;
             border: none;
-            width: 85%;
+            width: 55%;
             background-color: $green;
             color: #fff;
             cursor: pointer;
@@ -63,27 +65,15 @@ body {
             }
         }
 
-        .or {
-            font-size: 0.8rem;
-            margin-top: 1.5rem;
-        }
+        #create-account{
 
-        .icons {
-            i {
-                color: $green;
-                padding: 00.8rem 1.5rem;
-                border-radius: 10px;
-                margin-left: .9rem;
-                font-size: 1.5rem;
-                cursor: pointer;
-                border: 1px solid $darkGreen;
+            color: $darkGreen;
+            background-color: transparent;
 
-                &:hover {
-                    color: $beige;
-                    background: $darkGreen;
-                    transition: 1s;
-                    border: 1px solid $darkGreen;
-                }
+
+            &:hover{
+                background-color: $green;
+                color: #fff;
             }
         }
 
