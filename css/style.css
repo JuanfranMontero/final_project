@@ -159,8 +159,8 @@ body {
   width: 300px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .menu-expanded #header #title {
@@ -572,8 +572,8 @@ body {
   width: 300px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .menu-expanded #header #title {
@@ -924,6 +924,10 @@ body {
   background-color: rgba(128, 128, 128, 0.15);
 }
 
+.main-container .full-width-search_container .principal_container .container_add #form-add #ingreso:focus {
+  outline: none;
+}
+
 .main-container .full-width-search_container .principal_container .container_add #form-add #ingreso::-webkit-input-placeholder {
   font-size: 1rem;
 }
@@ -1117,6 +1121,8 @@ body {
   color: #333;
   padding: .6rem;
   overflow: hidden;
+  position: absolute;
+  top: 65%;
 }
 
 .main-container .table_products .product .content .description {
@@ -1353,8 +1359,8 @@ body {
   width: 300px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .menu-expanded #header #title {
@@ -1867,8 +1873,8 @@ body {
   width: 300px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .menu-expanded #header #title {
@@ -2482,8 +2488,8 @@ body {
   width: 300px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .menu-expanded #header #title {
@@ -2788,22 +2794,65 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #606C38;
 }
 
 #main-container-account .wrapper_account_profile .picture_profile img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 2px solid #333;
 }
 
 #main-container-account .wrapper_account_profile .info_profile {
-  width: 60%;
+  width: 65%;
+  margin: 1rem;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main-container-account .wrapper_account_profile .info_profile label {
+  padding-left: .6rem;
+}
+
+#main-container-account .wrapper_account_profile .info_profile input {
+  margin: .6rem;
+  border: none;
+  font-size: 1.2rem;
+  color: rgba(51, 51, 51, 0.8);
+  padding: .5rem 0;
+  background-color: rgba(51, 51, 51, 0.05);
+  padding: .8rem .8rem .8rem .25rem;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+}
+
+#main-container-account .wrapper_account_profile .info_profile input:focus {
+  padding-left: .5rem;
+  outline: none;
+  background-color: rgba(221, 161, 94, 0.75);
+  color: #333;
+}
+
+#main-container-account .wrapper_account_profile .info_profile input.visible {
+  border: 1.5px solid #BC6C25;
+}
+
+#main-container-account .wrapper_account_profile .mensaje-guardado {
+  display: none;
+  background-color: #606C38;
+  border-radius: 6px;
+  padding: .6rem;
+  color: #FEFAE0;
+  font-size: 1rem;
 }
 
 #main-container-account .wrapper_account_profile .btn_profile {
@@ -2822,36 +2871,74 @@ body {
 }
 
 #main-container-account .wrapper_account_profile .btn_profile #modify {
-  background-color: #606C38;
-  color: #FEFAE0;
+  background-color: transparent;
+  color: #BC6C25;
+  border: 1px solid #DDA15E;
 }
 
 #main-container-account .wrapper_account_profile .btn_profile #modify:hover {
-  background-color: #283618;
+  background-color: #DDA15E;
+  color: #FEFAE0;
 }
 
 #main-container-account .wrapper_account_profile .btn_profile #save {
   color: #FEFAE0;
-  background-color: #283618;
-}
-
-#main-container-account .wrapper_account_profile .btn_profile #save:hover {
   background-color: #606C38;
 }
 
-#main-container-account .wrapper_account_profile .btn_profile #delete {
-  background-color: #fff;
-  border: 1px solid #BC6C25;
-  color: #BC6C25;
-}
-
-#main-container-account .wrapper_account_profile .btn_profile #delete:hover {
-  background-color: #BC6C25;
-  color: #FEFAE0;
+#main-container-account .wrapper_account_profile .btn_profile #save:hover {
+  background-color: #283618;
 }
 
 /*============ FOOTER ===============*/
 /*============ FINAL FOOTER ===============*/
+@media all and (max-width: 1140px) {
+  #main-container-account .wrapper_account_profile {
+    margin-left: 50px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #main-container-account .wrapper_account_profile .picture_profile img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #main-container-account .wrapper_account_profile .picture_profile img {
+    width: 100px;
+    height: 100px;
+  }
+  #main-container-account .wrapper_account_profile .info_profile {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 500px) {
+  #main-container-account .wrapper_account_profile .picture_profile img {
+    width: 80px;
+    height: 80px;
+  }
+  #main-container-account .wrapper_account_profile .info_profile {
+    margin: 0;
+  }
+  #main-container-account .wrapper_account_profile .info_profile label {
+    font-size: .8rem;
+  }
+  #main-container-account .wrapper_account_profile .info_profile input {
+    letter-spacing: .5px;
+    font-size: .75rem;
+  }
+  #main-container-account .wrapper_account_profile .btn_profile {
+    margin: 0;
+    padding: .75rem;
+  }
+  #main-container-account .wrapper_account_profile .btn_profile button {
+    margin: 0 .75rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
