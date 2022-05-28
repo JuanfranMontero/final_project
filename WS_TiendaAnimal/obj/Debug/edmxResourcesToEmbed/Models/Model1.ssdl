@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TiendaAnimalDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="caracteristicas">
+    <Key>
+      <PropertyRef Name="id_caracteristicas" />
+    </Key>
+    <Property Name="edad" Type="varchar" MaxLength="100" />
+    <Property Name="raza" Type="varchar" MaxLength="100" />
+    <Property Name="codigo_ean" Type="varchar(max)" />
+    <Property Name="cuidado_especifico" Type="varchar(max)" />
+    <Property Name="opcion_nutricional" Type="varchar(max)" />
+    <Property Name="id_caracteristicas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ingrediente_principal" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="descripciones">
+    <Key>
+      <PropertyRef Name="id_descripcion" />
+    </Key>
+    <Property Name="ingrediente" Type="varchar(max)" />
+    <Property Name="constituyente_analticos" Type="varchar(max)" />
+    <Property Name="mineral" Type="varchar(max)" />
+    <Property Name="vitamina" Type="varchar(max)" />
+    <Property Name="energia_metabolizante" Type="varchar(max)" />
+    <Property Name="aditivos_tecnologicos" Type="varchar(max)" />
+    <Property Name="id_descripcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiendaAnimalData.dbo.nexo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="nexo">
+    <Key>
+      <PropertyRef Name="id_producto" />
+      <PropertyRef Name="id_descripcion" />
+      <PropertyRef Name="id_caracteristicas" />
+    </Key>
+    <Property Name="id_producto" Type="int" Nullable="false" />
+    <Property Name="id_descripcion" Type="int" Nullable="false" />
+    <Property Name="id_caracteristicas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="id_producto" />
+    </Key>
+    <Property Name="nombre" Type="varchar(max)" />
+    <Property Name="imagen" Type="varchar(max)" />
+    <Property Name="id_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_nexo_caracteristicas">
+    <End Role="caracteristicas" Type="Self.caracteristicas" Multiplicity="1" />
+    <End Role="nexo" Type="Self.nexo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="caracteristicas">
+        <PropertyRef Name="id_caracteristicas" />
+      </Principal>
+      <Dependent Role="nexo">
+        <PropertyRef Name="id_caracteristicas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nexo_descripciones">
+    <End Role="descripciones" Type="Self.descripciones" Multiplicity="1" />
+    <End Role="nexo" Type="Self.nexo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="descripciones">
+        <PropertyRef Name="id_descripcion" />
+      </Principal>
+      <Dependent Role="nexo">
+        <PropertyRef Name="id_descripcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nexo_productos">
+    <End Role="productos" Type="Self.productos" Multiplicity="1" />
+    <End Role="nexo" Type="Self.nexo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productos">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="nexo">
+        <PropertyRef Name="id_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TiendaAnimalDataModelStoreContainer">
+    <EntitySet Name="caracteristicas" EntityType="Self.caracteristicas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="descripciones" EntityType="Self.descripciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productos" EntityType="Self.productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nexo" EntityType="Self.nexo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [nexo].[id_producto] AS [id_producto], 
+    [nexo].[id_descripcion] AS [id_descripcion], 
+    [nexo].[id_caracteristicas] AS [id_caracteristicas]
+    FROM [dbo].[nexo] AS [nexo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_nexo_caracteristicas" Association="Self.FK_nexo_caracteristicas">
+      <End Role="caracteristicas" EntitySet="caracteristicas" />
+      <End Role="nexo" EntitySet="nexo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nexo_descripciones" Association="Self.FK_nexo_descripciones">
+      <End Role="descripciones" EntitySet="descripciones" />
+      <End Role="nexo" EntitySet="nexo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nexo_productos" Association="Self.FK_nexo_productos">
+      <End Role="productos" EntitySet="productos" />
+      <End Role="nexo" EntitySet="nexo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
