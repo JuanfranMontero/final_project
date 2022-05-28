@@ -11,7 +11,6 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <script src="assets/js/__search_filter.js"></script>
     <title>Consultas | BellyPlus</title>
 </head>
 
@@ -36,7 +35,7 @@
                     <img src="assets/img/logo-clinica.jpg" alt="Foto perfil">
                 </div>
                 <div id="name">
-                    <span>Juanfran Montero</span>
+                    <span>Medac Nova</span>
                 </div>
             </div>
         </a>
@@ -84,20 +83,14 @@
                 <div class="container_add">
                     <form action="#" id="form-add">
                         <input type="text" id="ingreso" placeholder="Ingrese un ingrediente...">
-                        <button id="btn_repeat">Limpiar</button>
-                        <button id="btn_add">Añadir</button>
+                        <div class="btn-form">
+                            <button id="btn_repeat">Limpiar</button>
+                            <button id="btn_add">Buscar</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        <!--
-        <div class="full-width-list_search_container" id='container-view'>
-            <div class="listado_ingredientes">
-                <ul id="lista_ingredientes">
-                </ul>
-            </div>
-        </div>
-        -->
 
         <div class="popup-product">
             <div class="info-product">
@@ -127,9 +120,9 @@
         </div>
         <div class="table_products">
 
-            <!-- <div class="product">
+           <!-- <div class="product">
                 <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/26640-princi.jpg" alt="Imagen pienso" class="picture-product">
+                    <img src="assets/img/pienso12.jpg" alt="Imagen pienso" class="picture-product">
                 </div>
                 <div class="content">
                     <div class="title">
@@ -142,112 +135,12 @@
                 <div class="read">
                     <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
                 </div>
-            </div>
+            </div>-->
 
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/pienso-true-origins-wild-country-water-adult-mta-31451.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Pienso True Origins Wild Dog Country Water Adult</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/pienso-natural-greatness-light-para-perros-mta-14744.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Pienso Natural Greatness Light & Fit para perros</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/pienso-para-perros-acana-adult-light-mta-4372.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Pienso para perros Acana Adult Light & Fit</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/2364-2364-1.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Royal Canin Maxi Adult</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/pienso-criadores-dietetic-hipoalerg-nico-para-perr-mta-17206.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Pienso Criadores Dietetic Hipoalergénico para perros</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="picture">
-                    <img src="https://images1.tiendanimal.es/g/26636-princi.jpg" alt="Imagen pienso" class="picture-product">
-                </div>
-                <div class="content">
-                    <div class="title">
-                        <h5>Pienso Nath Puppy Medium/Maxi Pollo para cachorros</h5>
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum sapiente molestias, harum qui totam odit ullam optio cum repelllibero?
-                    </div>
-                </div>
-                <div class="read">
-                    <p>Leer más  <i class="fal fa-long-arrow-alt-right"></i></p>
-                </div>
-            </div> -->
 
         </div>
     </div>
+    <script src="assets/js/__search_filter.js"></script>
 
 </body>
 
