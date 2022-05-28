@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TiendaAnimalDataModelStoreContainer" CdmEntityContainer="TiendaAnimalDataEntities1">
+    <EntitySetMapping Name="caracteristicas">
+      <EntityTypeMapping TypeName="TiendaAnimalDataModel.caracteristicas">
+        <MappingFragment StoreEntitySet="caracteristicas">
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="raza" ColumnName="raza" />
+          <ScalarProperty Name="codigo_ean" ColumnName="codigo_ean" />
+          <ScalarProperty Name="cuidado_especifico" ColumnName="cuidado_especifico" />
+          <ScalarProperty Name="opcion_nutricional" ColumnName="opcion_nutricional" />
+          <ScalarProperty Name="id_caracteristicas" ColumnName="id_caracteristicas" />
+          <ScalarProperty Name="ingrediente_principal" ColumnName="ingrediente_principal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="descripciones">
+      <EntityTypeMapping TypeName="TiendaAnimalDataModel.descripciones">
+        <MappingFragment StoreEntitySet="descripciones">
+          <ScalarProperty Name="ingrediente" ColumnName="ingrediente" />
+          <ScalarProperty Name="constituyente_analticos" ColumnName="constituyente_analticos" />
+          <ScalarProperty Name="mineral" ColumnName="mineral" />
+          <ScalarProperty Name="vitamina" ColumnName="vitamina" />
+          <ScalarProperty Name="energia_metabolizante" ColumnName="energia_metabolizante" />
+          <ScalarProperty Name="aditivos_tecnologicos" ColumnName="aditivos_tecnologicos" />
+          <ScalarProperty Name="id_descripcion" ColumnName="id_descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos">
+      <EntityTypeMapping TypeName="TiendaAnimalDataModel.productos">
+        <MappingFragment StoreEntitySet="productos">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TiendaAnimalDataModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nexo">
+      <EntityTypeMapping TypeName="TiendaAnimalDataModel.nexo">
+        <MappingFragment StoreEntitySet="nexo">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id_descripcion" ColumnName="id_descripcion" />
+          <ScalarProperty Name="id_caracteristicas" ColumnName="id_caracteristicas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
