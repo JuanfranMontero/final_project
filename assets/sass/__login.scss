@@ -4,36 +4,46 @@ body {
     height: 100vh;
     @include flex;
 
+    #picture{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+        img{
+            width: 200px;
+        }
+    }
+
     .wrapper {
-        width: 50%;
-        padding: 2rem 0 1rem 0;
+        width: 40%;
+        background-color: #fff;
+        padding: 4rem 2rem 2rem;
         margin: 50px auto;
-        background: #fff;
         border-radius: 10px;
         text-align: center;
-        border: 1px solid rgba(#333, .55);
-        box-shadow: 0 0 25px 5px rgba($beige, 0.5);
+        box-shadow: 0 0 25px 5px rgba($black, 0.5);
 
         h1 {
-            font-size: 2rem;
+            font-size: 3rem;
             color: $black;
         }
 
         p {
-            margin-bottom: 1.7rem;
+            margin-bottom: 2.1rem;
         }
 
         form {
             margin: 0 auto;
-            width: 50%;
+            width: 100%;
             input {
                 width: 85%;
                 outline: none;
                 border: none;
-                background: #dfe9f5;
-                padding: 12px 14px;
+                text-align: center;
+                padding: 12px 0 5px 14px;
                 margin-bottom: 10px;
-                border-radius: 8px;
+                border-bottom: 1px solid $darkGreen;
+                font-size: 1.25rem;
             }
 
             .recover {
@@ -44,22 +54,32 @@ body {
                 a {
                     text-decoration: none;
                     color: $black;
+
+                    &:hover{
+                        color: $orange;
+                    }
                 }
             }
         }
 
+        #back{
+            color: $black;
+            font-size: .8rem;
+        }
+
         button {
             font-size: 1.1rem;
-            margin-top: 1rem;
-            padding: 8px 0;
-            border-radius: 5px;
+            padding: 12px 0;
             outline: none;
             border: none;
             width: 55%;
             background-color: $green;
             color: #fff;
             cursor: pointer;
-
+            display: block;
+            margin: 0 auto;
+            margin-top: 1rem;
+            
             &:hover {
                 background-color: $darkGreen;
             }
@@ -69,9 +89,11 @@ body {
 
             color: $darkGreen;
             background-color: transparent;
-
+            border: 1px solid $darkGreen;
+            margin-bottom: 1rem;
 
             &:hover{
+                border: none;
                 background-color: $green;
                 color: #fff;
             }
@@ -88,6 +110,74 @@ body {
                 &:hover {
                     text-decoration: underline;
                 }
+            }
+        }
+    }
+    
+
+   
+}
+
+@media all and (max-width: 1140px){
+
+    .picture{
+        img{
+            width: 150px !important;
+        }
+    }
+
+    .wrapper{
+        h1{
+           font-size: 2rem !important; 
+        }
+        p{
+            font-size: 1rem !important;
+        }
+
+        form{
+          width: 100% !important;  
+
+          .recover{
+              a{
+                  font-size: .8rem;
+              }
+          }
+        }
+
+        button{
+            width: 90% !important;
+        }
+    }
+}
+
+
+@media all and (max-width: 1000px){
+    .wrapper{
+        width: 55% !important;
+    }
+}
+
+@media all and (max-width: 700px){
+    .wrapper{
+        width: 70% !important;
+    }
+}
+
+@media all and (min-width: 350px) and (max-width: 500px){
+    .wrapper{
+        width: 90% !important;
+
+        h1{
+            font-size: 1.5rem;
+        }
+
+        p{
+            font-size: .8rem;
+        }
+
+        form{
+            input{
+                font-size: 1rem;
             }
         }
     }

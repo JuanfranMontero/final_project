@@ -3979,7 +3979,7 @@ textarea.form-input {
 */
 .footer-classic {
 	padding: 30px 0;
-	background: #404044;
+	background:var(--beige);
 	color: #aab2b9;
 	font-size: 16px;
 }
