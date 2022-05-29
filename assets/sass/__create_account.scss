@@ -1,0 +1,157 @@
+@import "__default_styles";
+
+
+
+/*============ HEADER ===============*/
+//ESTILOS EN "__default_styles"
+/*============ FINAL HEADER ===============*/
+
+
+
+/* Wrapper */
+.container {
+    padding:100px 0;
+    width: 900px;
+}
+/* Wrapper End */
+
+
+/* Register Style */
+.register-box {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 24px 12px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(#333, .15);
+    border-top: none;
+    display: flex;
+    align-items: center;
+}
+.register-box > div {
+    width: 50%;
+    height: 100%;
+
+}
+/* Register Style End */
+
+
+/* Register Gallery Style */
+.gallery-box {
+    padding: 50px 50px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://images.unsplash.com/photo-1532247502237-3ebb6e1770b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=baa1ed644817198825fabda7f330e85f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
+}
+
+.gallery-title-box {
+    width: 100%;
+    float: left;
+}
+.gallery-title-box > * {
+    color: #e9e9e9;
+}
+.gallery-title-box h1 {
+    font-size: 48px;
+}
+.gallery-title-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.gallery-brand-logo {
+    position: absolute;
+    left: 50px;
+    bottom: 60px;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    border: solid 1px #e9e9e9;
+}
+/* Register Gallery Style End */
+
+
+/* Resgister User Info Style */
+.register-user-info-box {
+    width: 100%;
+    float: left;
+    padding: 0 50px;
+    color: #343a40;
+}
+
+.user-info-title-box h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #343a40;
+}
+.user-info-title-box p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #adb5bd;
+}
+.user-info-title-box p a {
+    color: #fcc419;
+}
+
+.user-info-form {
+    width: 100%;
+    margin-top: 30px;
+}
+.user-info-form > div {
+    width: 100%;
+}
+.user-info-form label {
+    width: 100%;
+    font-size: 12px;
+    color: #333;
+    transition: .2s;
+}
+.user-info-form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid $darkGreen;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: .2s;
+    color: rgba(0, 0, 0, .5);
+
+    &:focus{
+        outline: none;
+    }
+}
+
+
+.user-info-form button {
+    width: 100%;
+    margin-top: 5px;
+    color: #fff;
+    height: 50px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: $green;
+    border: none;
+}
+.user-info-form button:hover,
+.user-info-form button:focus {
+    background-color: $darkGreen;
+}
+
+#back_registrarse{
+    width: 100%;
+    margin-top: 5px;
+    color: $darkGreen;
+    height: 50px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: transparent;
+    border: 1px solid $darkGreen;
+
+    &:hover{
+        background-color: $darkGreen;
+        color: #fff;
+    }
+}
+/* Resgister User Info Style End */
