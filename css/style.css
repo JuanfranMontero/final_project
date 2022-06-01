@@ -103,6 +103,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -137,6 +138,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -516,6 +518,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -550,6 +553,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -1303,6 +1307,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -1337,6 +1342,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -1888,6 +1894,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -1922,6 +1929,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -2503,6 +2511,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -2537,6 +2546,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -2866,22 +2876,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 10px;
   width: 100%;
   background-color: #606C38;
 }
 
 #main-container-account .wrapper_account_profile .picture_profile img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
 #main-container-account .wrapper_account_profile .info_profile {
   width: 65%;
   margin: 1rem;
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2905,7 +2914,6 @@ body {
   padding: .8rem .8rem .8rem .5rem;
   border-radius: 5px;
   letter-spacing: 1.5px;
-  cursor: pointer;
 }
 
 #main-container-account .wrapper_account_profile .info_profile input:focus {
@@ -2928,17 +2936,13 @@ body {
   font-size: 1rem;
 }
 
-#main-container-account .wrapper_account_profile .btn_profile {
-  margin: 1rem 0;
-}
-
 #main-container-account .wrapper_account_profile .btn_profile button {
   cursor: pointer;
   border: none;
   border-radius: 8px;
   padding: 1rem;
   font-size: 1rem;
-  margin: 1rem;
+  margin: .5rem 1rem;
   -webkit-transition: all .4s;
   transition: all .4s;
 }
@@ -3111,6 +3115,7 @@ body {
 
 #sidemenu #menu-items .item {
   width: 300px;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item:visited {
@@ -3145,6 +3150,7 @@ body {
 #sidemenu #menu-items .item .icon.logout i {
   color: #BC6C25;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #sidemenu #menu-items .item .title {
@@ -3462,9 +3468,11 @@ body {
 /* Register Gallery Style */
 .gallery-box {
   padding: 50px 50px;
-  background-size: cover;
-  background-position: center;
-  background-image: url(https://images.unsplash.com/photo-1532247502237-3ebb6e1770b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=baa1ed644817198825fabda7f330e85f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
+}
+
+.gallery-box img {
+  width: 350px;
+  height: 350px;
 }
 
 .gallery-title-box {
@@ -3540,7 +3548,7 @@ body {
 
 .user-info-form input {
   width: 100%;
-  height: 40px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #283618;
   font-size: 16px;
@@ -3584,11 +3592,30 @@ body {
 }
 
 #back_registrarse:hover {
-  background-color: #283618;
+  background-color: #DDA15E;
   color: #fff;
 }
 
 /* Resgister User Info Style End */
+@media all and (max-width: 940px) {
+  .gallery-box img {
+    width: 250px;
+    height: 250px;
+  }
+  .user-info-form button {
+    height: 45px;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .gallery-box {
+    display: none;
+  }
+  .register-box > div {
+    width: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -9,9 +9,7 @@
 
 /*====FINAL MAIN CONTAINER====*/
 #main-container-account{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     width: 1140px;
     height: 100vh;
 
@@ -27,13 +25,13 @@
 
         .picture_profile{
             @include flex;
-            padding: 1rem;
+            padding: .5rem;
             border-radius: 10px;
             width: 100%;
             background-color: $green;
             img{
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
             }
         }
@@ -41,7 +39,6 @@
         .info_profile{
             width: 65%;
             margin: 1rem;
-            padding: 1rem;
             display: flex;
             flex-direction: column;
 
@@ -59,7 +56,6 @@
                 padding: .8rem .8rem .8rem .5rem;
                 border-radius: 5px;
                 letter-spacing: 1.5px;
-                cursor: pointer;
                 &:focus{
                     padding-left: .8rem;
                     outline: none;
@@ -85,14 +81,13 @@
         }
 
         .btn_profile{
-            margin: 1rem 0;
             button{
                 cursor: pointer;
                 border: none;
                 border-radius: 8px;
                 padding: 1rem;
                 font-size: 1rem;
-                margin: 1rem;
+                margin: .5rem 1rem;
                 transition: all .4s;
             }
             #modify{
