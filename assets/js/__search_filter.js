@@ -1,6 +1,7 @@
 
 window.onload = () => {
 
+	mostrarDatosLocalStorage()
 	showAllProducts()
 
 	/*====HEADER====*/
@@ -45,7 +46,11 @@ window.onload = () => {
 	*/
 	/*====FINAL BUSCADOR Y LISTADO====*/
 
-
+    let go_out = document.querySelector('#log_out a')
+    go_out.addEventListener('click', () => {
+        localStorage.clear()
+        window.location.href = "index.html"
+    })
 
 }
 
@@ -185,4 +190,11 @@ function productosTotales(total) {
 	let numProductos = document.querySelector(".top-info h6 span")
 	numProductos.textContent = ""
 	numProductos.textContent = total
+}
+
+function mostrarDatosLocalStorage(){
+	let picture_nav = document.querySelector('#sidemenu #profile #photo img')
+    picture_nav.src = localStorage.getItem('imagen')
+    let nombre_clinica_nav = document.querySelector('#sidemenu #profile #name span')
+    nombre_clinica_nav.innerHTML = localStorage.getItem('nombre_clinica')
 }

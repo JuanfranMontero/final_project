@@ -1,6 +1,8 @@
 
 window.onload = () => {
 
+    mostrarDatosLocalStorage()
+
     /*====HEADER====*/
     const btn = document.querySelector("#menu-btn")
     const menu = document.querySelector("#sidemenu")
@@ -38,4 +40,20 @@ window.onload = () => {
 
     /*====FINAL MAIN CONTAINER====*/
 
+
+
+    let go_out = document.querySelector('#log_out a')
+    go_out.addEventListener('click', () => {
+        localStorage.clear()
+        window.location.href = "index.html"
+    })
+
+}
+
+
+function mostrarDatosLocalStorage(){
+    let picture_nav = document.querySelector('#sidemenu #profile #photo img')
+    picture_nav.src = localStorage.getItem('imagen')
+    let nombre_clinica_nav = document.querySelector('#sidemenu #profile #name span')
+    nombre_clinica_nav.innerHTML = localStorage.getItem('nombre_clinica')
 }

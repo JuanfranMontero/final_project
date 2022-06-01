@@ -1,4 +1,7 @@
 window.onload = () => {
+
+    mostrarDatosLocalStorage()
+
         /*====HEADER====*/
         const btn = document.querySelector("#menu-btn")
         const menu = document.querySelector("#sidemenu")
@@ -18,6 +21,7 @@ window.onload = () => {
                 element.removeAttribute('readonly')
                 element.classList.add('visible')
             })
+            modificarDatos()
         })
 
         let btn_save = document.querySelector('#main-container-account .wrapper_account_profile .btn_profile #save')
@@ -34,40 +38,82 @@ window.onload = () => {
                 mensaje.style.display = 'none'
             }, 3000)
             
-            capturarDatos()
+            guardarDatos()
         })
 
-
+        let go_out = document.querySelector('#log_out a')
+        go_out.addEventListener('click', () => {
+            localStorage.clear()
+            window.location.href = "index.html"
+        })
 
     }
 
 
-    function capturarDatos(){
+    function modificarDatos(){
 
-        //let picture = document.querySelector('#main-container-account .wrapper_account_profile .picture_profile img')
         let nombre_clinica = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #nombre-clinica')
         let nombre_usuario = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #nombre-usuario')
         let contrasena = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #contrasena')
         let correo = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #correo')
         let telefono = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #telefono')
 
-
-
-        //picture.removeAttribute('src')
-        //picture.setAttribute('src', 'prueba')
-
+       
+        
         nombre_clinica.removeAttribute('value')
-        nombre_clinica.setAttribute('value', 'prueba')
+        nombre_clinica.setAttribute('value', nombre_clinica.value)
 
         nombre_usuario.removeAttribute('value')
-        nombre_usuario.setAttribute('value', 'prueba')
+        nombre_usuario.setAttribute('value', nombre_usuario.value)
 
+        contrasena.type = 'text'
         contrasena.removeAttribute('value')
-        contrasena.setAttribute('value', 'prueba')
+        contrasena.setAttribute('value', contrasena.value)
 
         correo.removeAttribute('value')
-        correo.setAttribute('value', 'prueba')
+        correo.setAttribute('value', correo.value)
 
         telefono.removeAttribute('value')
-        telefono.setAttribute('value', 'prueba')
+        telefono.setAttribute('value', telefono.value)
+
+
+        mostrarDatosLocalStorage()
+    }
+
+    function mostrarDatosLocalStorage(){
+
+        let picture_nav = document.querySelector('#sidemenu #profile #photo img')
+        let nombre_clinica_nav = document.querySelector('#sidemenu #profile #name span')
+        let picture = document.querySelector('#main-container-account .wrapper_account_profile .picture_profile img')
+        let nombre_clinica = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #nombre-clinica')
+        let nombre_usuario = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #nombre-usuario')
+        let contrasena = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #contrasena')
+        let correo = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #correo')
+        let telefono = document.querySelector('#main-container-account .wrapper_account_profile .info_profile #telefono')
+
+        picture_nav.src = localStorage.getItem('imagen')
+
+        nombre_clinica_nav.innerHTML = localStorage.getItem('nombre_clinica')
+
+        picture.src = localStorage.getItem('imagen')
+
+        nombre_clinica.removeAttribute('value')
+        nombre_clinica.setAttribute('value', localStorage.getItem('nombre_clinica'))
+    
+        nombre_usuario.removeAttribute('value')
+        nombre_usuario.setAttribute('value', localStorage.getItem('usuario'))
+    
+        contrasena.removeAttribute('value')
+        contrasena.setAttribute('value', localStorage.getItem('password'))
+    
+        correo.removeAttribute('value')
+        correo.setAttribute('value', localStorage.getItem('correo'))
+    
+        telefono.removeAttribute('value')
+        telefono.setAttribute('value', localStorage.getItem('telefono'))
+    }
+
+    function guardarDatos(){
+
+
     }

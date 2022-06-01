@@ -40,9 +40,11 @@
 /* Register Gallery Style */
 .gallery-box {
     padding: 50px 50px;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://images.unsplash.com/photo-1532247502237-3ebb6e1770b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=baa1ed644817198825fabda7f330e85f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
+
+    img{
+        width: 350px;
+        height: 350px;
+    }
 }
 
 .gallery-title-box {
@@ -110,7 +112,7 @@
 }
 .user-info-form input {
     width: 100%;
-    height: 40px;
+    height: 30px;
     border: none;
     border-bottom: 1px solid $darkGreen;
     font-size: 16px;
@@ -150,8 +152,33 @@
     border: 1px solid $darkGreen;
 
     &:hover{
-        background-color: $darkGreen;
+        background-color: $lightOrange;
         color: #fff;
     }
 }
 /* Resgister User Info Style End */
+
+@media all and (max-width: 940px){
+    .gallery-box{
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    .user-info-form{
+        button{
+            height: 45px;
+        }
+    }
+}
+
+@media all and  (max-width: 660px){
+    .gallery-box{
+        display: none;
+    }
+
+    .register-box > div{
+        width: 100%;
+    }
+}
