@@ -20,6 +20,7 @@ window.onload = () => {
 		.then(result => result.json())
 		.then(data => {
            if(data.length > 0){
+               console.log(data);
                if(data[0].activo == 1){
                    let imagen = data[0].imagen
                    let nombre_clinica = data[0].nombre_clinica
@@ -27,15 +28,17 @@ window.onload = () => {
                    let password = data[0].password
                    let telefono = data[0].telefono
                    let correo = data[0].email
+                   let id = data[0].id_usuario
                    
                    localStorage.setItem("imagen", imagen);
                    localStorage.setItem("nombre_clinica", nombre_clinica);
                    localStorage.setItem("usuario", usuario);
                    localStorage.setItem("password", password);
                    localStorage.setItem("telefono", telefono);
-                   localStorage.setItem("correo", correo)
+                   localStorage.setItem("correo", correo);
+                   localStorage.setItem('id', id);
 
-                   window.location.href = '__dashboard.html'
+                    window.location.href = '__dashboard.html'
                }
                else{
                    alert('Aún no se le ha podido activar su cuenta, pronto estará disponible. Gracias!')
