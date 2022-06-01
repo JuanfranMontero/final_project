@@ -195,7 +195,7 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover,
 [class^='heading-'] a:hover {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 h2 .text-big {
@@ -434,11 +434,11 @@ a:hover {
 a,
 a:focus,
 a:active {
-	color: #aab2b9;
+	color: var(--orange);
 }
 
 a:hover {
-	color: #ffffff;
+	color: var(--lightOrange);
 }
 
 a[href*='tel'],
@@ -463,24 +463,24 @@ a[href*='mailto'] {
 }
 
 .accent-link {
-	color: #ffffff;
+	color: var(--green);
 }
 
 .accent-link:hover {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 .underline-link {
-	color: #ffffff;
+	color: var(--green);
 }
 
 .underline-link:hover {
-	color: #ffffff;
+	color: var(--green);
 	text-decoration: underline;
 }
 
 .primary-link {
-	color: #505cfd;
+	color: var(--green);
 }
 
 .primary-link:hover {
@@ -493,7 +493,7 @@ a[href*='mailto'] {
 }
 
 .secondary-link:hover {
-	color: #505cfd;
+	color: var(--orange);
 	text-decoration: underline;
 }
 
@@ -535,11 +535,11 @@ a[href*='mailto'] {
 }
 
 .block-center:hover .block-center-header {
-	background-color: #505cfd;
+	background-color: var(--green);
 }
 
 .block-center-title {
-	background-color: #ffffff;
+	background-color: var(--green);
 }
 
 @media (max-width: 1599.98px) {
@@ -548,11 +548,11 @@ a[href*='mailto'] {
 	}
 
 	.block-center:hover .block-center-header {
-		background-color: #ffffff;
+		background-color: var(--green);
 	}
 
 	.block-center-header {
-		background-color: #505cfd;
+		background-color: var(--orange);
 	}
 }
 
@@ -821,6 +821,7 @@ a[href*='mailto'] {
 .pricing-box {
 	padding: 60px 55px 70px 55px;
 	text-align: center;
+	background-color: var(--green);
 }
 
 .pricing-box hr {
@@ -4074,7 +4075,7 @@ textarea.form-input {
 }
 
 .footer-classic-subscribe-form .form-input {
-	background-color: #39393e;
+	color: var(--black);
 	border: 1px solid #39393e;
 	border-radius: 30px;
 	padding: 12px 20px 12px 20px;
@@ -5275,7 +5276,7 @@ html [class*='section-'].section-bottom-0 {
 .section-intro {
 	padding: 100px 0;
 	position: relative;
-	background-color: #505cfd;
+	background-color:var(--green);
 }
 
 @media (min-width: 992px) {
@@ -5290,12 +5291,13 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .section-intro .intro-bg {
+	
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	opacity: .1;
+	opacity: .4;
 }
 
 .section-intro h1 {
@@ -5303,6 +5305,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .section-intro .intro-description {
+	
 	font-size: 18px;
 	max-width: 67%;
 	margin-left: auto;
@@ -5504,7 +5507,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-lighten {
-	background-color: #f8f8f8;
+	background-color: white;
 }
 
 .bg-gray-lighten:not([style*="background-"])+.bg-gray-lighten:not([style*="background-"]) {
@@ -5698,7 +5701,7 @@ html [class*='section-'].section-bottom-0 {
 	width: 150px;
 	height: 3px;
 	display: none;
-	background-color: #505cfd;
+	background-color: var(--darkGreen);
 }
 
 @media (min-width: 1200px) {
@@ -5975,7 +5978,7 @@ html:not(.lt-ie10) .not-animated {
 	font-size: 20px;
 	line-height: 46px;
 	color: #ffffff;
-	background: #505cfd;
+	background: var(--green);
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
@@ -6228,7 +6231,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-search .rd-search-form-submit:hover {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 .rd-navbar-search-toggle {
@@ -6284,7 +6287,7 @@ html.tablet .ui-to-top {
 }
 
 .navbar-contact-list li a:hover {
-	color: #aab2b9;
+	color: var(--lightOrange) ;
 }
 
 .navbar-contact-list>* {
@@ -6755,7 +6758,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap::-webkit-scrollbar-track {
-	background: #505cfd;
+	background: var(--orange);
 	border: none;
 	border-radius: 0;
 }
@@ -7130,7 +7133,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-megamenu .rd-megamenu-title a:hover {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 .rd-navbar-fixed .rd-navbar-submenu-toggle {
@@ -7142,7 +7145,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-search .rd-search-form-submit:hover {
-	color: #505cfd;
+	color:var(--orange);
 }
 
 .rd-navbar-fixed .rd-navbar-search-toggle {
@@ -7150,7 +7153,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-search-toggle:hover {
-	color: #505cfd;
+	color:var(--orange);
 }
 
 .rd-navbar-fixed .rd-navbar-collapse {
@@ -7257,7 +7260,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-sidebar .rd-nav-item.active .rd-nav-link {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 .rd-navbar-sidebar .rd-nav-item .rd-nav-link,
@@ -7284,7 +7287,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-sidebar .rd-nav-link:hover {
-	color: #505cfd;
+	color: var(--orange);
 }
 
 .rd-navbar-sidebar .rd-navbar-submenu .opened>.rd-navbar-submenu-toggle::after {
@@ -8631,13 +8634,13 @@ html.rd-navbar-fixed-linked .page {
 .progress-linear .progress-bar-linear {
 	width: 0;
 	height: inherit;
-	background: #505cfd;
+	background: var(--green);
 	transition: 1s all ease-in-out;
 }
 
 .progress-linear .progress-value {
 	font-weight: 700;
-	color: #505cfd;
+	color: var(--green);
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -8739,7 +8742,7 @@ html.rd-navbar-fixed-linked .page {
 .owl-carousel .owl-dot {
 	cursor: pointer;
 	user-select: none;
-	background: none;
+	background:none;
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -8802,7 +8805,7 @@ html.rd-navbar-fixed-linked .page {
 	line-height: 1;
 	cursor: pointer;
 	pointer-events: auto;
-	background: #505cfd;
+	background: white;
 	color: #151515;
 }
 
@@ -8866,8 +8869,8 @@ html.rd-navbar-fixed-linked .page {
 
 .owl-carousel .owl-dot.active span,
 .owl-carousel .owl-dot:hover span {
-	background: #505cfd;
-	border-color: #505cfd;
+	background: var(--green);
+	border-color: var(--green);
 }
 
 .test {
@@ -8924,7 +8927,7 @@ html.rd-navbar-fixed-linked .page {
 	max-width: 216px;
 	height: 216px;
 	margin-top: 30px;
-	background-color: #ffffff;
+	background-color: ;
 	padding: 10px;
 	border-radius: 50%;
 	align-self: center;
@@ -9011,7 +9014,7 @@ html.rd-navbar-fixed-linked .page {
 
 	.review-carousel .owl-dots .active:before {
 		font-size: 18px;
-		color: #505cfd;
+		color: var(--green);
 		font-weight: 700;
 		position: absolute;
 		content: "0" counter(button) " ";
@@ -9023,7 +9026,7 @@ html.rd-navbar-fixed-linked .page {
 	.review-carousel .owl-dots .active:after {
 		content: '';
 		width: 3px;
-		background-color: #505cfd;
+		background-color: var(--green);
 		height: 67px;
 		top: 21px;
 		left: 50%;
