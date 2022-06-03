@@ -1,5 +1,7 @@
 
 window.onload = () => {
+	mostrarDatosLocalStorage()
+	showAllProducts()
 
 	
 	/*====POP UP====*/
@@ -8,11 +10,32 @@ window.onload = () => {
 		document.querySelector('.popup-product').style.display = 'none'
 	})
 
-	let productsSearch = document.querySelectorAll(".table_products .product")
+	setTimeout(() => {
+
+		let products = document.querySelectorAll('.table_products .product')
+				
+		products.forEach(product_element => {
+			product_element.addEventListener('click', () => {
 	
-	productsSearch.forEach(product_element => {
+				let picture = product_element.querySelector(".picture-product").src,
+					marca = product_element.querySelector(".title").textContent
+					description = product_element.querySelector(".description").textContent;
+	
+				document.querySelector("#picture_popup").src = picture
+				document.querySelector("#title_popup").innerHTML = marca
+				document.querySelector("#description_popup").innerHTML = description
+				
+				document.querySelector(".popup-product").style.display = "block"
+				
+			})
+		})
+	}, 100)
+
+	let products = document.querySelectorAll('.table_products .product')
+	
+	products.forEach(product_element => {
 		product_element.addEventListener('click', () => {
-			console.log(product_element);
+
 			let picture = product_element.querySelector(".picture-product").src,
 				marca = product_element.querySelector(".content").textContent,
 				description = product_element.querySelector(".description").textContent;
@@ -28,8 +51,7 @@ window.onload = () => {
 	})
 	/*====END POP UP====*/
 
-	mostrarDatosLocalStorage()
-	showAllProducts()
+	
 
 	/*====HEADER====*/
 	const btn = document.querySelector("#menu-btn")
@@ -107,7 +129,10 @@ function showAllProducts() {
 			for (let elements of data) {
 				let div_product = document.createElement('div')
 				div_product.classList.add("product")
+				let content = document.createElement('div')
+				content.classList.add('content')
 				for (let element in elements) {
+					// console.log(`${element}: ${elements[element]}`);
 					let picture_product = document.createElement('div')
 					picture_product.classList.add("picture")
 					if (element == "imagen") {
@@ -118,8 +143,7 @@ function showAllProducts() {
 						picture_product.appendChild(img)
 						div_product.appendChild(picture_product)
 					}
-					let content = document.createElement('div')
-					content.classList.add('content')
+					
 					if (element == "nombre") {
 						let div_title = document.createElement('div')
 						div_title.classList.add("title")
@@ -127,6 +151,13 @@ function showAllProducts() {
 						title.innerHTML = elements[element]
 						div_title.appendChild(title)
 						content.appendChild(div_title)
+						div_product.appendChild(content)
+					}
+					if (element == "ingrediente" && typeof(element)!= null ) {
+						let div_description = document.createElement('div')
+						div_description.classList.add("description")
+						div_description.innerHTML = elements[element]
+						content.appendChild(div_description)
 						div_product.appendChild(content)
 					}
 				}
