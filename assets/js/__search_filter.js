@@ -1,6 +1,33 @@
 
 window.onload = () => {
 
+	
+	/*====POP UP====*/
+	let close = document.getElementById('menu-btn-popup')
+	close.addEventListener('click', () => {
+		document.querySelector('.popup-product').style.display = 'none'
+	})
+
+	let productsSearch = document.querySelectorAll(".table_products .product")
+	
+	productsSearch.forEach(product_element => {
+		product_element.addEventListener('click', () => {
+			console.log(product_element);
+			let picture = product_element.querySelector(".picture-product").src,
+				marca = product_element.querySelector(".content").textContent,
+				description = product_element.querySelector(".description").textContent;
+
+
+			document.querySelector("#picture_popup").src = picture
+			document.querySelector("#title_popup").innerHTML = marca
+			document.querySelector("#description_popup").innerHTML = description
+			
+			document.querySelector(".popup-product").style.display = "block"
+			
+		})
+	})
+	/*====END POP UP====*/
+
 	mostrarDatosLocalStorage()
 	showAllProducts()
 
@@ -14,10 +41,6 @@ window.onload = () => {
 	});
 	/*====FINAL HEADER====*/
 
-	/*====POP UP====*/
-	document.querySelector("#menu-btn-popup").addEventListener('click', () => {
-		document.querySelector(".popup-product").style.display = "none"
-	})
 
 	/*====BUSCADOR Y LISTADO====*/
 	let btnAdd = document.querySelector(".full-width-search_container .principal_container .container_add #form-add .btn-form #btn_add")
@@ -35,22 +58,18 @@ window.onload = () => {
 		showAllProducts()
 	})
 
-	/*
-	const textbox = document.querySelector("#ingreso");
-	textbox.addEventListener("keydown", event => {
-		event.stopPropagation()
-		if (event.keycode == '13') {
-			console.log('enter');
-		}
-	});
-	*/
+
 	/*====FINAL BUSCADOR Y LISTADO====*/
 
-    let go_out = document.querySelector('#log_out a')
-    go_out.addEventListener('click', () => {
-        localStorage.clear()
-        window.location.href = "index.html"
-    })
+
+
+
+
+	let go_out = document.querySelector('#log_out a')
+	go_out.addEventListener('click', () => {
+		localStorage.clear()
+		window.location.href = "index.html"
+	})
 
 }
 
@@ -192,9 +211,9 @@ function productosTotales(total) {
 	numProductos.textContent = total
 }
 
-function mostrarDatosLocalStorage(){
+function mostrarDatosLocalStorage() {
 	let picture_nav = document.querySelector('#sidemenu #profile #photo img')
-    picture_nav.src = localStorage.getItem('imagen')
-    let nombre_clinica_nav = document.querySelector('#sidemenu #profile #name span')
-    nombre_clinica_nav.innerHTML = localStorage.getItem('nombre_clinica')
+	picture_nav.src = localStorage.getItem('imagen')
+	let nombre_clinica_nav = document.querySelector('#sidemenu #profile #name span')
+	nombre_clinica_nav.innerHTML = localStorage.getItem('nombre_clinica')
 }
